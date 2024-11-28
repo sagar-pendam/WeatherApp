@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="/style.css">
+
+   
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box1">
+            <nav class="flex   justify-end  py-3 relative bg-slate-700 ">
+
+               
+
+                <div class="right-bar flex w-[96%] items-center sm:justify-evenly  justify-end ">
+                    <div class="search-logo w-[60%] sm:flex hidden ">
+                        <div class="rounded-l-full px-2 py-1 bg-white flex items-center justify-center ">
+                            <span class=" material-symbols-outlined text-gray-500 search-logo2 cursor-pointer" onclick="fetchAllData(0)">
+                                search
+                            </span>
+                        </div>
+
+
+                        <div class="search-bar w-[100%]">
+                            <input type="text" placeholder="search City "
+                                class="w-[100%] py-2 px-2 rounded-r-full outline-none text-gray-500 sm:text-lg text-[12px] search-data">
+                        </div>
+                    </div>
+
+                  
+                    <div class="sm:flex menu  items-center transition-all duration-500 ">
+                        <!-- <span id="m" class="material-symbols-outlined cursor-pointer sm:filter-none invert menu2"
+                            onclick="showMenu()">
+                            menu
+                        </span> -->
+                        <div id="mySidebar" class="sidebar">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                            <a href="#">About</a>
+                            <a href="#">Services</a>
+                            <a href="#">Clients</a>
+                            <a href="#">Contact</a>
+                          </div>
+                          <div id="main" class=" ">
+                            <button class="openbtn  bg-slate-700"  onclick="openNav()">☰</button>  
+                            
+                          </div>
+                    </div> 
+                    </div>
+                    
+
+                    <img onclick="closeMenu()"
+                        class="cursor-pointer close hidden transition-all duration-500 hover:w-[36px] hover:text-blue-500  w-[0%] invert-1"
+                        src="close.svg" alt="" srcset="">
+
+                </div>
+
+
+
+
+            </nav>
+            <div
+                class="sm:hidden sm:bg-gray-100 w-full flex flex-col px-4 text-start gap-4 py-4 h-[260px]  abc relative bg-slate-700 sm:text-black text-white">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-4xl font-semibold fls-like1">28 <sup>o</sup></h1>
+                    </div>
+                    <img class="w-10 h-10 animate-pulse sm:filter-none invert" src="cloud.svg" alt="" srcset="">
+                </div>
+
+
+                <div class="search-logo01 flex  srch-lgo">
+                    <div class="rounded-l-full px-2 py-1 bg-white flex items-center justify-center ">
+                        <span class=" material-symbols-outlined text-gray-500 search-logo2" onclick="fetchAllData(1)">
+                            search
+                        </span>
+                    </div>
+
+
+                    <div class="search-bar w-[100%]">
+                        <input type="text" placeholder="search City "
+                            class="w-[100%] py-2 px-2 rounded-r-full outline-none text-gray-500 sm:text-lg text-[12px] search-data">
+                    </div>
+                </div>
+
+                <div class="my-6 def transition-all duration-1000 absolute top-[150px] left-[22px]">
+                    <div>
+                        <h1><span class="text-sm font-semibold maxtempC">30 <sup
+                                    class="text-sm font-semibold">o</sup></span><span class="text-sm font-semibold"> /
+                            </span><span class="text-sm font-semibold mintempC">22 <sup class="text-sm font-semibold">o</sup>
+                                
+                    </div>
+                    <div><span class="text-sm font-semibold dayTime">Fri</span> <span class="text-sm font-semibold">,</span>
+                        <span class="text-sm font-semibold currentTime">10:58pn</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="h-24 bg-yellow-500 fixed bottom-0 z-10 md:hidden flex w-full nav-bt">
+                <div class="flex items-center justify-around w-full text-xs">
+                    <div class="flex items-center justify-center gap-2 flex-col">
+                        <img src="calender.svg" alt="" srcset="">
+                        <div>
+                            <span>Today</span>
+                        </div>
+
+                    </div>
+                    <div class="flex items-center justify-center gap-2 flex-col">
+                        <img src="clock.svg" alt="" srcset="">
+                        <div>
+                            <span>Hourly</span>
+                        </div>
+
+                    </div>
+                    <div class="flex items-center justify-center gap-2 flex-col">
+                        <img src="days.svg" alt="" srcset="">
+                        <div>
+                            <span>10 Day</span>
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center justify-center gap-2 flex-col">
+                        <img src="radar.svg" alt="" srcset="">
+                        <div>
+                            <span>Radar</span>
+                        </div>
+
+                    </div>
+                    <div class="flex items-center justify-center gap-2 flex-col">
+                        <img src="video.svg" alt="" srcset="">
+                        <div>
+                            <span>Video</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div> -->
+            <hr>
+            <main class=" bg-slate-700  first-div  flex flex-col h-[70vh]   sm:h-auto ">
+                <!-- <main class="sm:bg-gray-100 bg-slate-700  first-div flex flex-col h-[60vh]   sm:h-auto hp1" > -->
+
+                <div class=" overflow-y-scroll h-[40vh] mt-[20px] hp1 sm:h-auto  bg-slate-700">
+
+
+                    <div class="t1 bg-slate-700 sm:flex hidden gap-2 py-2 ">
+                        
+                    </div>
+                   
+
+
+                    <div class="details h-auto  w-full flex  gap-2 px-4 mt-1   items-center justify-center bg-slate-700">
+                        <div class="left_div bg-slate-700 2xl:w-[70%] text-white p-5 w-[100%]">
+                            <div class="f1 py-3 px-2 rounded-lg bg-red-400 hidden sm:flex sm:flex-col">
+                                <div class="a1 px-2">
+                                    <h1 class="current-time-date">Currently no data searched</h1>
+                                    <span>Time</span>
+                                </div>
+                                <div class="a2 flex justify-between mt-6 px-2">
+                                    <div>
+                                        <h1 class="text-6xl font-semibold fls-like1">28 <sup>o</sup></h1>
+                                    </div>
+                                    <div class="">
+                                        <span class="text-[74px] material-symbols-outlined">
+                                            filter_drama
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="a3 flex flex-col">
+                                    <div>
+                                        <h1 class="wheather-desc">Cloudy</h1>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <!-- <h1>Day 33 <sup>o</sup> </h1>
+                                        <div class="flex items-center">
+                                            <span class="text-[8px] material-symbols-outlined">
+                                                fiber_manual_record
+                                            </span>
+                                        </div>
+
+                                        <h1>Night 25 <sup>o</sup></h1> -->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="f2 my-2 sm:flex hidden locationDetails">Nilam Sramjivi Nagar,Maharashtra,India
+                                Forecast</div>
+
+                            <div class="f3 bg-red-400 pt-4 pb-4 rounded-lg">
+                                <div class="THD bg-red-400 py-3 px-2 flex justify-around gap-2">
+                                    <button
+                                        class="b1 sm:w-52 rounded-full py-2 bg-black text-white font-bold  sm:text-base text-sm w-20">Hourly</button>
+                                    <button
+                                        class="b2 sm:w-52 rounded-full py-2  text-[white]  sm:text-base text-sm w-20 ">Daily</button>
+                                    <!-- <button
+                                        class="b3 sm:w-52 rounded-full py-2  text-[gray] sm:text-base text-sm w-20">Daily</button> -->
+                                </div>
+                                <!-- flex items-center justify-around  -->
+                                <div
+                                    class="todayWeather today flex items-center justify-around  bg-red-400 mt-4 mb-4 gap-6 sm:overflow-x-hidden overflow-x-scroll">
+
+
+
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px]  material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="sm:text-xl text-sm">Now</h1>
+                                        </div>
+                                    </div>
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px]  material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="sm:text-xl text-sm">0:30</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px]  material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="sm:text-xl text-sm">1:30</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px]  material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="sm:text-xl text-sm">2:30</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px]  material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="sm:text-xl text-sm">3:30</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- flex items-center justify-around -->
+                                <div
+                                    class="todayWeather hourly hidden bg-red-400 mt-4 mb-4 gap-6 sm:overflow-x-hidden overflow-x-scroll">
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Today</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Thu 27</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Fri 28</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Sat 29</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+
+                                            <h1 class="">Sun 30</h1>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                </div>
+                                <!-- flex items-center justify-around -->
+                                <div
+                                    class="todayWeather daily hidden sm:overflow-x-hidden overflow-x-scroll bg-red-400 mt-4 mb-4 px-4 gap-6">
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Today</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Thu 27</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Fri 28</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h1 class="">Sat 29</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="m flex flex-col items-center">
+                                        <div class="flex items-center">
+                                            <p class="text-xl font-bold">29 <sup>o</sup></p>
+                                        </div>
+                                        <div>
+                                            <span class="sm:text-[60px] text-[50px] material-symbols-outlined">
+                                                partly_cloudy_day
+                                            </span>
+                                        </div>
+                                        <div>
+
+                                            <h1 class="">Sun 30</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="f2 my-2 locationDetails">Nilam Sramjivi Nagar,Maharashtra,India Forecast</div>
+
+                            <div class="box3 bg-red-400 px-6 py-4 rounded-lg md:mb-4 mb-[120px]">
+                                <div class="t1 flex sm:justify-between justify-center gap-[28px] flex-wrap">
+                                    <div class="left1 flex flex-col text-start">
+                                        <div class="ml-2 font-bold">
+                                            <span class="text-[20px]">Feels Like</span>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="flex items-center">
+                                                <span class="text-[30px] sm:text-[50px] material-symbols-outlined">
+                                                    device_thermostat
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <h1 class="text-[60px] sm:text-[80px] font-bold feels-like">29 <sup>o</sup></h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right1 flex flex-col">
+                                        <!-- <div>
+                                            <span class="text-[8rem] material-symbols-outlined">
+                                                looks
+                                            </span>
+                                        </div> -->
+                                        <div class="flex gap-5">
+                                            <div class="flex items-center">
+                                                <span class="material-symbols-outlined">
+                                                    water_lux
+                                                    </span>
+                                                <span class="sunrise">5:53</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <span class="material-symbols-outlined">
+                                                    wb_twilight
+                                                    </span>
+                                                <span class="sunset">19:05</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="t2 mt-10">
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <span class="material-symbols-outlined">
+                                                thermostat
+                                            </span>
+                                            <span class="font-bold">High/Low</span>
+                                        </div>
+                                        <div>
+                                            <h1 class="font-bold"><span class="maxtempC">---</span>/<span
+                                                    class="mintempC">25</span> <sup>o</sup></h1>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <span class="material-symbols-outlined">
+                                                air
+                                            </span>
+                                            <span class="font-bold">Wind</span>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <span class="material-symbols-outlined">
+                                                north_east
+                                            </span>
+                                            <h1 class="font-bold windspeedKmph">16 km/h</h1>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <span class="material-symbols-outlined">
+                                                humidity_high
+                                            </span>
+                                            <span class="font-bold">Humidity</span>
+                                        </div>
+                                        <div class="flex">
+                                            <h1 class="font-bold humidity">83</h1>&#37;
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <span class="material-symbols-outlined">
+                                                dew_point
+                                            </span>
+                                            <span class="font-bold">Dew Point</span>
+                                        </div>
+                                        <div>
+                                            <h1 class="font-bold dew_point">22 <sup>o</sup></h1>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <span class="material-symbols-outlined">
+                                                compress
+                                            </span>
+                                            <span class="font-bold">Pressure</span>
+                                        </div>
+                                        <div class="flex ">
+                                            <span class="material-symbols-outlined">
+                                                arrow_downward
+                                            </span>
+                                            <h1 class="font-bold pressure">1001.7<span>mb</span></h1>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
+                                                height="28" color="#ffffff" fill="none">
+                                                <path d="M12 3V4.5" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <path d="M17 13C17 10.2386 14.7614 8 12 8C9.23858 8 7 10.2386 7 13"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M5.98828 6.98926L4.92762 5.9286" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M22 13L20.5 13" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <path d="M3.5 13L2 13" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <path d="M19.0703 5.92871L18.0097 6.98937" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" />
+                                                <path
+                                                    d="M6.5 16V19C6.5 19.9428 6.5 20.4142 6.79289 20.7071C7.08579 21 7.55719 21 8.5 21V21C9.44281 21 9.91421 21 10.2071 20.7071C10.5 20.4142 10.5 19.9428 10.5 19V16"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M13.5 16L15.5 21L17.5 16" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="font-bold">UV Index</span>
+                                        </div>
+                                        <div>
+                                            <h1 class="font-bold"><span class="uv-index">0</span> of 11</h1>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <span class="material-symbols-outlined">
+                                                visibility
+                                            </span>
+                                            <span class="font-bold">Visiblity</span>
+                                        </div>
+                                        <div>
+                                            <h1 class="font-bold visibility">Unlimited</h1>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="r1 text-[15px] sm:text-[18px] mt-2 mb-4 flex justify-between">
+                                        <div class="flex items-start justify-center gap-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
+                                                height="28" color="#ffffff" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M10 2.2002C14.5645 3.12674 18 7.16224 18 12.0002C18 16.8381 14.5645 20.8736 10 21.8001"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="font-bold ">Moon Phase</span>
+                                        </div>
+                                        <div>
+                                            <h1 class="font-bold moon-phase">Waning Gibbous</h1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+            </main>
+            <main class="second-div hidden">
+
+                <header>Header</header>
+            </main>
+           
+
+            <footer class="bg-[#111822] text-white mt-10  md:flex md:flex-col  p-5 hidden">
+                <div class="f1 flex justify-center">
+                    <div class="flex gap-5 w-[50%] items-center justify-center">
+                        <div>
+                            <h1 class="font-semibold">Contact With Us</h1>
+                        </div>
+                        <img class="bg-blue-100 rounded-full p-2" src="fb.svg" alt="" srcset="">
+                        <img class="bg-blue-100 rounded-full p-2" src="twitter.svg" alt="" srcset="">
+                        <img class="bg-blue-100 rounded-full p-2" src="insta.svg" alt="">
+                        <img class="bg-blue-100 rounded-full p-2" src="youtube.svg" alt="" srcset="">
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+                <div class="f2 flex justify-center mt-5 mb-5">
+                    <!-- <div class=" flex justify-center gap-5 text-white">
+                        <a href="black">Feedback</a>
+                        <a href="black">Weather API</a>
+                        <a href="black">News Room</a>
+                    </div> -->
+                </div>
+                <div class="f3 flex justify-center">
+                    <div class=" flex justify-center gap-6 text-white">
+                        
+                       
+                    </div>
+                </div>
+
+                <div class="f4 flex justify-center mt-14 mb-14">
+                    <div class="flex items-center justify-center w-[37%] text-center">
+                        <h1>
+                            © 2024 Weatherly. All rights reserved.
+                        </h1>
+                    </div>
+                </div>
+
+
+            </footer>
+        </div>
+        <div class="box2">
+         
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+<script>
+
+</script>
+
+</html>
